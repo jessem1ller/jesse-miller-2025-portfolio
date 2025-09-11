@@ -7,19 +7,17 @@ import { toast } from '@/components/ui/use-toast';
 
 const Hero = () => {
   const socialLinks = [
-    { icon: Github, href: '#', label: 'GitHub' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Instagram, href: '#', label: 'Instagram' },
-    { icon: Mail, href: '#contact', label: 'Email' }
+    { icon: Github, url: 'https://github.com/jessem1ller', label: 'GitHub' },
+    { icon: Linkedin, url: 'https://www.linkedin.com/in/jessemillersd/', label: 'LinkedIn' },
+    { icon: Instagram, url: 'https://www.instagram.com/silverhonda84/', label: 'Instagram' },
+    { icon: Mail, url: '#contact', label: 'Email' }
   ];
 
-  const handleSocialClick = (label, href) => {
-    if (href === '#contact') {
+  const handleSocialClick = (url) => {
+    if (url === '#contact') {
       document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
     } else {
-      toast({
-        title: "🚧 This feature isn't implemented yet—but don't worry! You can request it in your next prompt! 🚀"
-      });
+      window.open(url, '_blank', 'noopener,noreferrer');
     }
   };
 
@@ -55,7 +53,7 @@ const Hero = () => {
           >
             Frontend Developer crafting beautiful, interactive web experiences
             <br />
-            with modern technologies and pixel-perfect design
+            with modern technologies and frameworks
           </motion.p>
 
           <motion.div
@@ -64,12 +62,12 @@ const Hero = () => {
             transition={{ delay: 0.6, duration: 0.8 }}
             className="flex justify-center space-x-6 mb-12"
           >
-            {socialLinks.map((social, index) => (
+            {socialLinks.map((social) => (
               <motion.button
                 key={social.label}
                 whileHover={{ scale: 1.2, rotate: 5 }}
                 whileTap={{ scale: 0.9 }}
-                onClick={() => handleSocialClick(social.label, social.href)}
+                onClick={() => handleSocialClick(social.url)}
                 className="p-3 glass-effect rounded-full hover:glow-effect transition-all duration-300"
               >
                 <social.icon className="w-6 h-6" />

@@ -15,7 +15,7 @@ function App() {
     <>
       <Helmet>
         <title>Jesse Miller - Frontend Developer Portfolio</title>
-        <meta name="description" content="Jesse Miller is a passionate Frontend Developer specializing in React, JavaScript, and modern web technologies. View my portfolio and get in touch!" />
+        <meta name="description" content="Jesse Miller is a passionate Frontend Developer specializing in Next.js, TailwindCSS, JavaScript, and modern web technologies. View my portfolio and get in touch!" />
       </Helmet>
       <div className="min-h-screen">
         <Header />

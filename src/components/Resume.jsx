@@ -8,57 +8,45 @@ import { toast } from '@/components/ui/use-toast';
 const Resume = () => {
   const experiences = [
     {
-      title: 'Senior Frontend Developer',
-      company: 'TechCorp Solutions',
-      location: 'San Francisco, CA',
-      period: '2022 - Present',
+      title: 'Frontend Engineer',
+      company: 'Skinstric AI',
+      location: 'Australia (Remote)',
+      period: '2025 - Present',
       description: [
-        'Led development of responsive web applications using React and TypeScript',
-        'Improved application performance by 40% through code optimization',
-        'Mentored junior developers and conducted code reviews',
-        'Collaborated with UX/UI designers to implement pixel-perfect designs'
+        'Architected real-time skin analysis platform using OpenAI Vision API and Next.js, achieving 98% detection accuracy across diverse skin conditions.',
+        'Developed responsive UI with TailwindCSS and GSAP animations, implementing dynamic skincare recommendation cards with 60% improved engagement.',
+        'Optimized performance using Next.js Server Components and Lottie animations, achieving sub-2-second analysis time for skin condition detection.',
+        'Built custom animation system using GSAP timeline for seamless user experience during skin analysis processing, increasing user retention by 40%.',
+        'Implemented efficient image processing pipeline combining OpenAI Vision API with 4D Mini model for enhanced accuracy in skin tone and texture analysis.'
       ]
     },
     {
-      title: 'Frontend Developer',
-      company: 'Digital Innovations',
-      location: 'Austin, TX',
-      period: '2020 - 2022',
+      title: 'Frontend Developer & Support Staff',
+      company: 'Frontend Simplified',
+      location: 'Australia (Remote)',
+      period: '2025 - Present',
       description: [
-        'Developed and maintained multiple client-facing web applications',
-        'Implemented modern JavaScript frameworks and libraries',
-        'Worked closely with backend teams to integrate APIs',
-        'Participated in agile development processes and sprint planning'
+        'Selected as peer mentor after achieving top 5% performance in cohort, providing debugging support and code reviews for 20+ students across React and Next.js projects.',
+        'Created and led workshops on modern frontend optimization techniques, helping students improve their portfolio project load times by an average of 50%.',
+        'Developed comprehensive learning resources for React component architecture and TypeScript, resulting in 70% of mentored students successfully implementing type-safe applications.',
+        'Initiated weekly pair programming sessions focused on accessibility and SEO best practices, leading to 90% of mentored students achieving WCAG compliance in their projects.',
+        'Built and shared reusable component library using ShadCN/UI, reducing development time for student projects by 40% and improving code consistency.',
+        'Led study groups on deployment strategies and CI/CD, resulting in 85% of students successfully implementing automated deployment pipelines for their portfolio projects.'
       ]
     },
-    {
-      title: 'Junior Web Developer',
-      company: 'StartupXYZ',
-      location: 'Remote',
-      period: '2019 - 2020',
-      description: [
-        'Built responsive websites using HTML, CSS, and JavaScript',
-        'Assisted in the development of company\'s main product platform',
-        'Learned modern development tools and best practices',
-        'Contributed to open-source projects and team documentation'
-      ]
-    }
   ];
 
   const education = [
     {
-      degree: 'Bachelor of Science in Computer Science',
-      school: 'University of California, Berkeley',
-      period: '2015 - 2019',
-      description: 'Graduated Magna Cum Laude with focus on Software Engineering and Web Technologies'
+      degree: 'Certificate in Computer Science',
+      school: 'Full Stack Engineering Institute',
+      period: '2025',
+      description: '3.9 GPA - Completed intensive program covering full stack development, algorithms, and data structures with hands-on projects using React, Node.js, and databases.'
     }
   ];
 
   const certifications = [
-    'AWS Certified Developer Associate',
-    'Google Analytics Certified',
-    'React Developer Certification',
-    'Scrum Master Certified'
+    'Udemy - Ultimate 2025 Full Stack Developer Bootcamp',
   ];
 
   const handleDownload = () => {
