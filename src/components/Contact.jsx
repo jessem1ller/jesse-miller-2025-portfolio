@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, Copy } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -43,7 +44,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     // Basic validation
     if (!formData.name || !formData.email || !formData.message) {
       toast({
@@ -53,18 +54,36 @@ const Contact = () => {
       return;
     }
 
-    // Simulate form submission
-    toast({
-      title: "Message sent successfully! 🎉",
-      description: "Thank you for reaching out. I'll get back to you soon!"
-    });
-
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
+    // EmailJS integration
+    emailjs.send(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message
+      },
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    )
+    .then(() => {
+      toast({
+        title: "Message sent successfully! 🎉",
+        description: "Thank you for reaching out. I'll get back to you soon!"
+      });
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      });
+    })
+    .catch(() => {
+      toast({
+        title: "Failed to send message",
+        description: "Please try again later.",
+        variant: "destructive"
+      });
     });
   };
 
