@@ -48,9 +48,7 @@ const About = () => {
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">About Me</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            I'm a passionate Frontend Developer with 5+ years of experience creating digital experiences 
-            that combine beautiful design with robust functionality. I love turning complex problems 
-            into simple, elegant solutions.
+            A versatile software developer with over a year of experience, specializing in both frontend and fullstack development. Proficient in a broad range of technologies including Next.js, React, TypeScript, Firebase and more. Passionate about building scalable, efficient and user-friendly applications.
           </p>
         </motion.div>
 

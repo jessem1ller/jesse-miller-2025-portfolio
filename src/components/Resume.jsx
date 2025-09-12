@@ -50,9 +50,12 @@ const Resume = () => {
   ];
 
   const handleDownload = () => {
-    toast({
-      title: "🚧 This feature isn't implemented yet—but don't worry! You can request it in your next prompt! 🚀"
-    });
+    const link = document.createElement('a');
+    link.href = '/Resume.pdf';
+    link.download = 'Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -80,7 +83,6 @@ const Resume = () => {
         </motion.div>
 
         <div className="grid lg:grid-cols-3 gap-12">
-          {/* Experience */}
           <div className="lg:col-span-2">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -134,7 +136,6 @@ const Resume = () => {
 
           {/* Education & Certifications */}
           <div className="space-y-8">
-            {/* Education */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -155,7 +156,6 @@ const Resume = () => {
               ))}
             </motion.div>
 
-            {/* Certifications */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}

@@ -17,20 +17,20 @@ const Contact = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'jesse.miller@email.com',
+      value: 'me@jessemiller.tech',
       action: 'copy'
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567'
+      value: '+1 (619) 302-1435',
+      href: 'tel:+16193021435'
     },
     {
       icon: MapPin,
       label: 'Location',
-      value: 'San Francisco, CA',
-      href: '#'
+      value: 'Prescott Valley, AZ',
+      href: 'https://www.google.com/maps/place/Prescott+Valley,+AZ'
     }
   ];
 
@@ -86,10 +86,10 @@ const Contact = () => {
         });
     } else if (info.href === '#') {
       toast({
-        title: "🚧 This feature isn't implemented yet—but don't worry! You can request it in your next prompt! 🚀"
+        title: "🚧 This feature isn't implemented yet! 🚀"
       });
     } else {
-      window.location.href = info.href;
+      window.open(info.href, '_blank', 'noopener,noreferrer');
     }
   };
 
@@ -111,7 +111,6 @@ const Contact = () => {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -151,7 +150,7 @@ const Contact = () => {
                           size="sm"
                           className="ml-2 p-1 h-auto text-gray-400 hover:text-white hover:bg-white/10"
                           onClick={(e) => {
-                            e.stopPropagation(); // Prevent parent onClick from firing
+                            e.stopPropagation();
                             handleContactClick(info);
                           }}
                         >
