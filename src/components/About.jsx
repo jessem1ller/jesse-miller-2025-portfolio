@@ -82,7 +82,6 @@ const About = () => {
             </div>
           </motion.div>
 
-          {/* Right Column - Skills */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}

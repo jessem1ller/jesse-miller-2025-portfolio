@@ -134,7 +134,6 @@ const Resume = () => {
             </motion.div>
           </div>
 
-          {/* Education & Certifications */}
           <div className="space-y-8">
             <motion.div
               initial={{ opacity: 0, x: 50 }}
